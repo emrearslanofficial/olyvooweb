@@ -1,66 +1,51 @@
 import React from "react";
 import MotionWrapper from "./MotionWrapper";
 
+const screens = [
+  { src: "/screens/2.png", alt: "Home", title: "Home", description: "Discover new people." },
+  { src: "/screens/3.png", alt: "Chat", title: "Chat", description: "Global conversations." },
+  { src: "/screens/4.png", alt: "Profile", title: "Profile", description: "Show your style." },
+  { src: "/screens/5.png", alt: "Explore", title: "Explore", description: "Find communities." },
+  { src: "/screens/6.png", alt: "Settings", title: "Settings", description: "Manage account." },
+];
+
 const Preview = () => {
   return (
-    <section id="preview" className="py-20 scroll-mt-24 bg-white/5">
+    <section id="preview" className="py-16 scroll-mt-24 bg-white/5">
       <MotionWrapper>
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-white">
-          App Preview
-        </h2>
-        <p className="text-gray-300 text-center mt-3 max-w-2xl mx-auto">
-          Take a closer look at Olyvoo — where chat, connection, and culture come together beautifully.
-        </p>
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-white">
+            App Preview
+          </h2>
+          <p className="text-gray-400 text-center mt-2 max-w-xl mx-auto text-sm">
+            Take a closer look at Olyvoo — where chat, connection, and culture come together.
+          </p>
 
-        {/* ✅ Preview Screens */}
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {/* 🖼️ Home Screen */}
-          <div className="rounded-2xl border border-white/10 p-4 bg-darkBg/60 hover:bg-darkBg/80 transition flex flex-col items-center">
-            <div className="w-full rounded-xl overflow-hidden border border-white/10 aspect-[9/16] bg-black flex items-center justify-center">
-              <img
-                src="/screens/home.png"
-                alt="Home Screen"
-                className="w-full h-full object-contain object-center"
-              />
-            </div>
-            <h3 className="text-center text-white mt-4 font-semibold">Home</h3>
-            <p className="text-center text-gray-400 text-sm">
-              Discover new people and explore trending rooms.
-            </p>
-          </div>
-
-          {/* 🖼️ Chat Screen */}
-          <div className="rounded-2xl border border-white/10 p-4 bg-darkBg/60 hover:bg-darkBg/80 transition flex flex-col items-center">
-            <div className="w-full rounded-xl overflow-hidden border border-white/10 aspect-[9/16] bg-black flex items-center justify-center">
-              <img
-                src="/screens/chat.png"
-                alt="Chat Screen"
-                className="w-full h-full object-contain object-center"
-              />
-            </div>
-            <h3 className="text-center text-white mt-4 font-semibold">Chat</h3>
-            <p className="text-center text-gray-400 text-sm">
-              Real-time global conversations with instant translations.
-            </p>
-          </div>
-
-          {/* 🖼️ Profile Screen */}
-          <div className="rounded-2xl border border-white/10 p-4 bg-darkBg/60 hover:bg-darkBg/80 transition flex flex-col items-center">
-            <div className="w-full rounded-xl overflow-hidden border border-white/10 aspect-[9/16] bg-black flex items-center justify-center">
-              <img
-                src="/screens/profile.png"
-                alt="Profile Screen"
-                className="w-full h-full object-contain object-center"
-              />
-            </div>
-            <h3 className="text-center text-white mt-4 font-semibold">Profile</h3>
-            <p className="text-center text-gray-400 text-sm">
-              Customize your profile, show your style, and connect authentically.
-            </p>
+          {/* ✅ 5 Kartı Yan Yana Sığdıran Grid Yapısı */}
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {screens.map((screen, index) => (
+              <div 
+                key={index}
+                className="rounded-xl border border-white/5 p-2.5 bg-[#0a0a0a]/60 hover:bg-[#0a0a0a]/80 transition-all flex flex-col items-center"
+              >
+                <div className="w-full rounded-lg overflow-hidden border border-white/10 aspect-[9/16] bg-black flex items-center justify-center relative">
+                  <img
+                    src={process.env.PUBLIC_URL + screen.src}
+                    alt={screen.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-center text-white mt-3 font-semibold text-sm">
+                  {screen.title}
+                </h3>
+                <p className="text-center text-gray-500 text-[11px] mt-1 px-1 line-clamp-2">
+                  {screen.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
       </MotionWrapper>
     </section>
   );
