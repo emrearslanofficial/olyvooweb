@@ -2,11 +2,11 @@ import React from "react";
 import MotionWrapper from "./MotionWrapper";
 
 const screens = [
-  { src: "/screens/2.png", alt: "Home", title: "Home", description: "Discover new people." },
-  { src: "/screens/3.png", alt: "Chat", title: "Chat", description: "Global conversations." },
-  { src: "/screens/4.png", alt: "Profile", title: "Profile", description: "Show your style." },
-  { src: "/screens/5.png", alt: "Explore", title: "Explore", description: "Find communities." },
-  { src: "/screens/6.png", alt: "Settings", title: "Settings", description: "Manage account." },
+  { src: "/screens/2.png", alt: "Filter", title: "Home", description: "Unleash your creativity with filters." },
+  { src: "/screens/3.png", alt: "Match", title: "Match", description: "Matching with people." },
+  { src: "/screens/4.png", alt: "Match", title: "Match", description: "A match has been found." },
+  { src: "/screens/5.png", alt: "Chat", title: "Chat", description: "Chat without any language barriers." },
+  { src: "/screens/6.png", alt: "Explore", title: "Explore", description: "Find communities." },
 ];
 
 const Preview = () => {
