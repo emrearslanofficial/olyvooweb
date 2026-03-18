@@ -46,7 +46,7 @@ const Footer = () => {
 
         {/* 📄 Copyright */}
         <p className="text-sm text-gray-500">
-          © {new Date().getFullYear()} Olyvoo · Built with ❤️ by Emmedya
+          © {new Date().getFullYear()} Olyvoo · by Emmedya
         </p>
       </div>
       </MotionWrapper>
