@@ -16,19 +16,26 @@ const DeleteAccount = () => {
       {/* 🧠 Noindex meta tag for Google Search */}
       <Helmet>
         <meta name="robots" content="noindex, nofollow" />
-        <title>Account Deletion - Olyvoo</title>
+        <title>Account Deletion - Your Account</title>
       </Helmet>
 
       <div className="max-w-md w-full text-center">
-        <img
-          src="/logo.png"
-          alt="Olyvoo Logo"
-          className="w-14 h-14 mx-auto mb-6 opacity-90"
-        />
+        <div className="flex justify-center items-center gap-6 mb-8">
+    <img
+      src="/logo.png"
+      alt="Olyvoo Logo"
+      className="w-14 h-14 opacity-90 object-contain"
+    />
+    <img
+      src="/logok.png"
+      alt="Kelime Simyası Logo"
+      className="w-14 h-14 opacity-90 object-contain"
+    />
+  </div>
 
         <h1 className="text-3xl font-bold mb-3">Request Account Deletion</h1>
         <p className="text-gray-300 mb-8">
-          Please fill out the form below to permanently delete your Olyvoo account and all related data.  
+          Please fill out the form below to permanently delete your Olyvoo and Kelime Simyası: Harf Birleştir account and all related data.  
           Make sure to use the same email address linked to your account.
         </p>
 
@@ -84,6 +91,19 @@ const DeleteAccount = () => {
         <p className="mt-10 text-gray-500 text-sm">
           This page is provided to comply with Google Play’s Account Deletion Policy.
         </p>
+
+        <b>
+          Developed by Emmedya
+        </b>
+        <b>
+        <p>
+          <br/>
+          Kelime Simyası: Harf Birleştir
+          <br/>
+          Olyvoo
+        </p>
+        </b>
+
       </div>
     </section>
   );
