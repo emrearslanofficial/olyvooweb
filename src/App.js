@@ -10,6 +10,7 @@ import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import DeleteAccount from "./pages/DeleteAccount";
 import DeleteKelimeAccount from "./pages/DeleteKelimeSimyaAccount";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const PageWrapper = ({ children }) => (
   <motion.div
@@ -59,6 +60,14 @@ const AnimatedRoutes = () => {
           element={
             <PageWrapper>
               <DeleteKelimeAccount />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/privacy-policy"
+          element={
+            <PageWrapper>
+              <PrivacyPolicy />
             </PageWrapper>
           }
         />

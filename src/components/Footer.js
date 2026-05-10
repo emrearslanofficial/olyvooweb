@@ -1,5 +1,6 @@
 import React from "react";
-import { Instagram, Linkedin, Music2 } from "lucide-react"; // TikTok ikonu için Music2 kullanıldı (stil benzer)
+import { Instagram, Linkedin, Music2 } from "lucide-react";
+import { Link } from "react-router-dom";
 import MotionWrapper from "./MotionWrapper";
 
 const Footer = () => {
@@ -42,6 +43,13 @@ const Footer = () => {
           >
             <Linkedin size={22} />
           </a>
+        </div>
+
+        {/* 📄 Nav Links */}
+        <div className="flex gap-4 text-sm">
+          <Link to="/privacy-policy" className="text-gray-500 hover:text-white transition">
+            Privacy Policy
+          </Link>
         </div>
 
         {/* 📄 Copyright */}
